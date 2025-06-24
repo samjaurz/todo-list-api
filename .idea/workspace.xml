@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2470cb96-aa15-4fa1-aa0f-86e5b5db13be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/requirement.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../algorithm-data-structure" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithm-data-structure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../prueba.py" beforeDir="false" />
     </list>
@@ -57,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750751239338</updated>
-      <workItem from="1750751240477" duration="403000" />
+      <workItem from="1750751240477" duration="508000" />
     </task>
     <servers />
   </component>
