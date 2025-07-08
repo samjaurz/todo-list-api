@@ -1,18 +1,21 @@
-from sqlalchemy.orm import DeclarativeBase, Mapped , mapped_column
-from sqlalchemy import  String
-from sqlalchemy import create_engine
+from sqlalchemy.orm import Mapped , mapped_column
+from sqlalchemy import  String, Boolean
 
-engine = create_engine('sqlite:///tasks.db', echo=True)
-
-class Base(DeclarativeBase):
-    pass
+from . import Base
 
 class Task(Base):
     __tablename__ = "task"
     id : Mapped[int] = mapped_column(primary_key=True)
     name : Mapped[str] = mapped_column(String)
+    status : Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
 
     def __repr__(self) -> str:
         return f"<Task id={self.id} name={self.name}>"
 
-Base.metadata.create_all(engine)
+
+    def to_dict(self) -> dict:
+        return {
+            "id": self.id,
+            "name": self.name,
+            "status": self.status.__str__(),
+        }
